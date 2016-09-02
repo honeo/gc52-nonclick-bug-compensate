@@ -1,0 +1,27 @@
+{
+  "name": "gc52-nonclick-bug-compensate",
+  "version": "1.0.0",
+  "description": "GoogleChrome v52以降の不具合を何とかするやつ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "author": "honeo",
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "GoogleChrome"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-latest": "^6.14.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "opener": "^1.4.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
+  }
+}

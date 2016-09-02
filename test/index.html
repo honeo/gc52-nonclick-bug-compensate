@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<title>gc52-nonclick-bug-compensate</title>
+		<script>
+			window.addEventListener('load', (e)=>{
+
+				const anchor = document.querySelector('A');
+				let count = 0;
+
+				anchor.addEventListener('click', (e)=>{
+					e.preventDefault();
+					count++;
+					anchor.textContent = `click: ${count}`
+				}, false);
+
+				setTimeout(anchor.focus.bind(anchor), 100);
+
+			}, false);
+		</script>
+		<script src="bundle_index.js" defer></script>
+		<script src="http://localhost:8080/webpack-dev-server.js" defer></script>
+	</head>
+	<body>
+		<div>
+			<a href="">click: 0</a>
+		</div>
+		<div>
+			<input type="button" value="Reload" onclick="location.reload();">
+		</div>
+	</body>
+</html>
